@@ -31,11 +31,11 @@ $('#generate-qr-code').click(function () {
     var container = $('#qr-code-container');
     container.show();
     QrCodeWithLogo.toCanvas({
-        canvas: container,
+        canvas: container[0],
         content: original_link,
         width: 300,
         logo: {
-          src: '/img/z-icone.png',
+          src: '{{env('QRCODE_ICON_URL')}}',
           borderRadius: 3,
           logoSize: 0.20,
           borderSize: 0.05
