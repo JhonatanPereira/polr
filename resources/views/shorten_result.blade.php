@@ -14,7 +14,7 @@
 </div>
 <a id="generate-qr-code" class='btn btn-primary'>Generate QR Code</a>
 <a href='{{route('index')}}' class='btn btn-info'>Shorten another</a>
-
+<br>
 <canvas id="qr-code-container" style="display: none;"></canvas>
 
 @endsection
@@ -37,8 +37,8 @@ $('#generate-qr-code').click(function () {
         logo: {
           src: '{{env('QRCODE_ICON_URL')}}',
           borderRadius: 3,
-          logoSize: 0.20,
-          borderSize: 0.05
+          logoSize: 0.18,
+          borderSize: 0.03
         }
     })
 });
